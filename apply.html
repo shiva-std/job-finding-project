@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Apply Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Apply Filling Form</h1>
+
+    <form id="jobForm">
+
+        <h2>Personal Details</h2>
+
+        <label>Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name"><hr>
+
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Enter your email"><hr>
+
+        <label>Phone</label>
+        <input type="text" id="phone" placeholder="Enter phone number"><hr>
+
+        <label>Address</label>
+        <textarea id="address" placeholder="Enter address"></textarea><hr>
+
+        <h2>Education</h2>
+
+        <label>SSC School</label>
+        <input type="text" placeholder="Enter school name">
+        <label>Marks</label>
+        <input type="number" placeholder="Enter marks"><hr>
+
+        <label>Intermediate College</label>
+        <input type="text" placeholder="Enter college name">
+        <label>Marks</label>
+        <input type="number" placeholder="Enter marks"><hr>
+
+        <label>Degree</label>
+        <input type="text" placeholder="Enter degree">
+        <label>Marks</label>
+        <input type="number" placeholder="Enter marks"><hr>
+         
+        <h2>Skills</h2>
+
+        <input type="text" placeholder="HTML">
+        <input type="text" placeholder="CSS">
+        <input type="text" placeholder="JavaScript">
+
+        <h2>Career Objective</h2>
+
+        <textarea placeholder="Write your objective"></textarea><hr>
+
+        Upload candidate Photo: 
+        <input type="file" accept="image/*"><br><br>
+
+        Upload Resume PDF: 
+        <input type="file" accept=".pdf"><br><br>
+
+        <button type="submit" id="submitBtn">Submit</button>
+
+    </form>
+</div>
+
+<script>
+document.getElementById("submitBtn").addEventListener("click", function(event) {
+
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let address = document.getElementById("address").value;
+
+    if (name && email && phone && address) {
+        alert("🎉 Congrats! You got the job. We will contact you soon.");
+        window.location.href = "selected.html";
+    } else {
+        alert("⚠️ Please fill all required fields");
+    }
+
+});
+</script>
+
+
+<footer>
+    <p>WE created for only college project purpose</p>
+</footer>
+</body>
+</html>
